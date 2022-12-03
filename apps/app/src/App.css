@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-width {
+  width: 24%;
+}
+
+@media screen and (max-width: 1024px) {
+  .card-width {
+    width: 100%;
+  }
+}
+
+.card-gap {
+  gap: 1%;
+  row-gap: 5px;
+}
+
+.card-padding {
+  padding: 0.5%;
+}
+
+.inherit-placeholder::placeholder {
+  color: inherit;
+}
+
+.inherit-placeholder::webkit-input-placeholder {
+  color: inherit;
+}
+
+.inherit-placeholder:ms-input-placeholder {
+  color: inherit;
+}

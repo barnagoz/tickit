@@ -1,0 +1,117 @@
+###
+GET http://localhost:5000/users/test
+Content-Type: application/json
+
+{
+    "token" : "49a4f763b9466315fcf7670136ea56a37177f9622361b9ae56f9b47b1d1495cbce272674cab26ceb6c2f9e4616a24ccf19c453d9acc620484bb68c1863f0082b5b8e54608953b05704cc0b395881cea5630812f86cad0d1707bf5c7e11f2822fed1bf0b7059685ca591b4f9e95edeb830099ed013e286ee0fef051bace08c8c8fc"
+}
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "barnabasgoz",
+    "password": "Barni-10203040",
+    "email": "barnabasgoz@outlook.hu",
+    "email_notification": "1"
+}
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "barnabasgoz",
+    "password": "pacsalinta"
+}
+
+###
+POST http://localhost:5000/auth/forgotPassword
+Content-Type: application/json
+
+{
+    "username": "barnabasgoz",
+    "email_address": "barnabasgoz@outlook.hu"
+}
+
+###
+POST http://localhost:5000/auth/changePassword
+Content-Type: application/json
+
+{
+    "username": "barnabasgoz",
+    "password": "pacsalinta",
+    "token": "8717528bffc2b4e55488799177f733f8ecfe0f164d36753cf1384dce217b7f709934b0806a312721edae02e0ea45a3a9bca7b5b3f48e7af642c6112a3cf8e5dcb53bdfdde8a2d6ea0b3e477a96b6d6b9677afce1b902759fca99355e38c66b27d82dccaf7da74ca34b8f6d49f1707f2d1d94cad9bcc928febcd8454ff20aff7d53e7fe"
+}
+
+###
+POST http://localhost:5000/users/onboarding
+Content-Type: application/json
+
+{
+    "token" : "2e311728023e606fa6459dac916547e4e0f87550e3ab50f2232c22a54ed6418ad01adf062db06eeb2bc32fa1a7a64e054374198ff02e1b81738b394f943f8c67d7df8e65b0f8eb11fde02d014998a50fa8e4a287fd0ac3d44f9644c63841c4eacd250555b4d8c4ae0e360e58f64228fabaf4ccdf4eeecfe6038f4dda2f7fb50c8e",
+    "username" : "barnabasgoz",
+    "page_title" : "TickIt errors - 2", 
+    "subheading" : "Have you found any error? Then, please report it!", 
+    "background" : "https://i.imgur.com/4jJf06b.png",
+    "color_scheme" : "1",
+    "link" : "tickit-errors",
+    "input":[
+        {
+            "type": "text", 
+            "placeholder": "Your name"
+        },
+        {
+            "type": "text", 
+            "placeholder": "Your email address"
+        },
+        {
+            "type": "textarea", 
+            "placeholder": "Explain the error"
+        },
+        {
+            "type": "checkbox", 
+            "placeholder": "I'm a user of TickIt"
+        }]
+}
+
+###
+POST http://localhost:5000/users/pageDataChange
+Content-Type: application/json
+
+{
+    "token" : "2e311728023e606fa6459dac916547e4e0f87550e3ab50f2232c22a54ed6418ad01adf062db06eeb2bc32fa1a7a64e054374198ff02e1b81738b394f943f8c67d7df8e65b0f8eb11fde02d014998a50fa8e4a287fd0ac3d44f9644c63841c4eacd250555b4d8c4ae0e360e58f64228fabaf4ccdf4eeecfe6038f4dda2f7fb50c8e",
+    "username" : "barnabasgoz",
+    "page_title" : "TickIt errors - 3", 
+    "subheading" : "Have you found any error? Then, please report it!", 
+    "background" : "https://i.imgur.com/4jJf06b.png",
+    "color_scheme" : "2",
+    "link" : "tickit-errors",
+    "input":[
+        {
+            "type": "text", 
+            "placeholder": "Name"
+        },
+        {
+            "type": "text", 
+            "placeholder": "Email address"
+        },
+        {
+            "type": "textarea", 
+            "placeholder": "Explain the error"
+        },
+        {
+            "type": "checkbox", 
+            "placeholder": "I'm not a user of TickIt"
+        }]
+}
+
+###
+POST http://localhost:5000/users/linkChange
+Content-Type: application/json
+
+{
+    "token" : "2e311728023e606fa6459dac916547e4e0f87550e3ab50f2232c22a54ed6418ad01adf062db06eeb2bc32fa1a7a64e054374198ff02e1b81738b394f943f8c67d7df8e65b0f8eb11fde02d014998a50fa8e4a287fd0ac3d44f9644c63841c4eacd250555b4d8c4ae0e360e58f64228fabaf4ccdf4eeecfe6038f4dda2f7fb50c8e",
+    "username" : "barnabasgoz",
+    "link" : "tickit-errors"
+}
